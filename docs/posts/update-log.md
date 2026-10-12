@@ -9,6 +9,30 @@ tags: ["公告", "更新日志"]
 
 ---
 
+## 2026-10-12
+
+### 新增内容
+
+**模块四 · 推理优化** 第 3 章「nano-vllm 源码解读」上线，以约 1200 行的极简推理引擎 [nano-vllm](https://github.com/GeeeekExplorer/nano-vllm) 为主线，逐模块读懂连续批处理、PagedAttention、FlashAttention、张量并行与 CUDA Graph 在真实代码里的组织方式：
+
+- **文章：** [3.1 项目全景与四层架构](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/31-项目全景与四层架构/) | 认识 nano-vllm 的定位与目录结构，用一张四层架构图读懂从用户请求到 token 输出的完整数据流
+
+- **文章：** [3.2 配置、入口与一次 generate 的全流程](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/32-配置入口与推理主循环/) | 从 example.py 出发拆解 Config/SamplingParams/LLM/LLMEngine，看懂 generate 主循环如何驱动 add_request、step 与 postprocess
+
+- **文章：** [3.3 模型骨架与核心算子](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/33-模型与核心算子/) | 逐层拆解 Qwen3 实现：RMSNorm、RoPE、SwiGLU、并行 Linear 与张量并行切分、词表并行 Embedding/LMHead，以及 Attention 的 KV 写入与 FlashAttention 两条路径
+
+- **文章：** [3.4 KV Cache 与 BlockManager](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/34-kvcache与blockmanager/) | 拆解分块 KV 管理：Block 结构、PagedAttention 的分块思想、基于 xxhash 的前缀缓存、块的分配回收，以及 Sequence 的状态机与 block_table
+
+- **文章：** [3.5 Scheduler 与连续批处理](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/35-scheduler与连续批处理/) | 读懂调度核心：Waiting/Running 双队列、Prefill/Decode 分离调度、Token Budget 预算、chunked prefill，以及显存不足时的抢占与重计算
+
+- **文章：** [3.6 ModelRunner、CUDA Graph 与性能基准](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/36-modelrunner引擎循环与性能/) | 序列张量化、全局 Context 注入、KV Cache 显存切分、CUDA Graph 的捕获与回放，以及官方性能基准与 vLLM 对比
+
+### 调整内容
+
+- 原《vLLM 快速入门》下沉至第 1 章，调整为 [1.2 vLLM 快速入门](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第1章-llm推理基础/12-vllm快速入门/)，作为推理基础的实操入门。
+
+---
+
 ## 2026-10-08
 
 ### 新增内容
