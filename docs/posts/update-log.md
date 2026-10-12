@@ -9,6 +9,54 @@ tags: ["公告", "更新日志"]
 
 ---
 
+## 2026-10-08
+
+### 新增内容
+
+**模块四 · 推理优化** 第 4 章「量化」6 篇文章上线：
+
+- **文章：** [4.1 量化基础：Scale、粒度与 PTQ/QAT](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第4章-量化/41-量化基础/) | 从数值映射理解量化与反量化，讲清位宽、Scale、零点、量化粒度，以及校准和 PTQ/QAT 的区别
+
+- **文章：** [4.2 W8A8 量化：SmoothQuant 如何处理激活离群值](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第4章-量化/42-w8a8与smoothquant/) | 从 Activation Outlier 出发推导 SmoothQuant 的等价缩放，理解平滑系数、INT8 GEMM 与离线部署流程
+
+- **文章：** [4.3 Weight-only INT4：GPTQ、AWQ 与 Marlin](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第4章-量化/43-weight-only-int4/) | 理解 GPTQ 的误差补偿、AWQ 的激活感知缩放，以及 Marlin 如何把 INT4 存储转化为推理收益
+
+- **文章：** [4.4 KV Cache 量化：KIVI 与 FP8 缓存](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第4章-量化/44-kv-cache量化/) | 理解 KV Cache 量化的流式约束、KIVI 对 Key/Value 的不同分组，以及 vLLM FP8 KV Cache 的校准与收益边界
+
+- **文章：** [4.5 FP8 与 NVFP4/MXFP4：低比特浮点怎样工作](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第4章-量化/45-fp8与nvfp4-mxfp4/) | 区分整数与浮点量化，理解 FP8 的范围与精度，以及 NVFP4、MXFP4 的微块缩放与硬件执行条件
+
+- **文章：** [4.6 量化选型与 vLLM 实战](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第4章-量化/46-量化选型与vllm实战/) | 按瓶颈选择量化候选，理解 vLLM 量化格式与 Kernel 的关系，并完成 FP16 与 AWQ INT4 的吞吐和生成质量对照
+
+---
+
+## 2026-10-07
+
+### 新增内容
+
+**模块四 · 推理优化** 第 5 章「Speculative Decoding」5 篇文章上线：
+
+- **文章：** [5.1 投机解码核心原理：先猜一段，再让大模型验收](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/51-投机解码核心原理/) | 从自回归串行瓶颈出发推导 Draft + Verify、接受概率与残差分布，证明最终输出服从 Target 分布
+
+- **文章：** [5.2 Draft 模型与无模型方案：怎样便宜地猜得更准](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/52-draft模型与无模型方案/) | 比较独立小模型、N-gram Prompt Lookup 与 Suffix Decoding，理解 Tokenizer 兼容、历史匹配、候选覆盖与接受率的权衡
+
+- **文章：** [5.3 Medusa 与 EAGLE：复用大模型信息生成更好的草稿](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/53-medusa与eagle/) | 讲清 Medusa 多头预测、EAGLE 特征级草稿、EAGLE-2 动态树与 EAGLE-3 训练改进，理解 Tree Attention 与路径提交
+
+- **文章：** [5.4 投机解码的收益边界：接受率高，为什么仍可能变慢](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/54-收益边界与限制/) | 建立平均提交长度与完整轮耗时的性能账本，分析批处理、长上下文、量化、调度与流式延迟的共同约束
+
+- **文章：** [5.5 vLLM 投机解码实战：配置、接受率与性能一起测](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/55-vllm投机解码实战/) | 以 vLLM v0.31.0 为基准，依次启动普通 Decode、N-gram 与独立 Draft，采集接受指标、质量输出与延迟吞吐
+
+---
+
+## 2026-09-15
+
+### 新增内容
+
+**模块四 · 推理优化** 新增第 12 章「端侧推理」：
+
+- **文章：** [12.1 端侧推理基础：从模型导出到异构硬件执行](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第12章-端侧推理/121-端侧推理基础/) | 系统理解端侧推理的硬件、模型格式、运行时、量化、内存与 Benchmark，并通过 ExecuTorch/XNNPACK 走通最小部署链路
+
+---
+
 ## 2026-07-09
 
 ### 新增内容
@@ -26,6 +74,16 @@ tags: ["公告", "更新日志"]
 - **文章：** [2.4 Chunked Prefill 与统一调度](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/24-chunked-prefill-与统一调度/) | 深入 Chunked Prefill：把长 Prompt 的 Prefill 切块，消除它对 Decode 请求的干扰；理解 vLLM V1 如何用统一 Token 预算调度器抹平 Prefill/Decode 边界
 
 - **文章：** [2.5 Attention 后端与图优化](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/25-attention-后端与图优化/) | 深入 vLLM 的可插拔 Attention 后端（FlashAttention/FlashInfer/FlashMLA/Triton）与图优化：用 CUDA Graph 和 torch.compile 消除 Decode 阶段的 CPU 启动开销
+
+**模块三 · 分布式训练** 集合通信、优化器与数据并行章节文章上线：
+
+- **文章：** [2.1 集合通信原语详解](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/21-集合通信原语详解/) | 讲清 AllReduce/ReduceScatter/AllGather/All-to-All 的输入输出语义、Ring AllReduce 算法原理，以及单次通信耗时的量化方法
+
+- **文章：** [3.1 优化器：从 SGD 到 AdamW 与显存开销分析](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/31-优化器原理与显存开销分析/) | 梳理优化器从 SGD 到 AdamW 的演进，算清优化器状态的显存开销与 FP32 主权重的必要性，并介绍大 Batch 场景下的 LARS/LAMB
+
+- **文章：** [4.1 数据并行详解](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/41-数据并行详解/) | 深入 DP/DDP/FSDP 三代方案的演进逻辑、梯度同步机制与通信量/显存账本的数学推导，理解 AllReduce 与参数分片的本质区别
+
+- **文章：** [4.2 PyTorch 数据并行从原理到实战](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/42-pytorch-数据并行从原理到实战/) | 系统掌握 PyTorch 数据并行全栈：通信原语、DDP、FSDP 参数分片与多机多卡实战，附完整代码示例
 
 ---
 
