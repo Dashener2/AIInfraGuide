@@ -214,6 +214,90 @@ cudaMallocHost(&h_pinned, size);  // 分配锁页内存，传输速度提升 2-3
 cudaFreeHost(h_pinned);            // 释放锁页内存
 ```
 
+**多 Stream 流水线：把 CPU 准备与 GPU 计算重叠起来**
+
+单个 Stream 只能保证“传输 → 计算 → 回传”在同一队列里顺序执行。真正的流水线需要**多个 Stream**：当 GPU 在 `streams[i]` 上处理第 i 批数据时，CPU 已经在准备第 i+1 批，`streams[i+1]` 也随即开始搬运。核心在于 `cudaMemcpyAsync` 一提交就返回，CPU 不会停下来等 GPU——这就是把“碎片时间”集中利用起来的本质。
+
+```
+时间 →
+CPU:  准备B0 | 准备B1 | 准备B2 | 准备B3 | ...        (CPU 一直在准备下一批)
+GPU:         |--- B0 ---||--- B1 ---||--- B2 ---|    (搬运 + 计算 + 回传)
+```
+
+下面用 4 批数据演示这个流水线，每批数据拥有独立的 Stream 以及独立的锁页/设备内存：
+
+```cpp
+#include <cuda_runtime.h>
+#include <cstdio>
+
+__global__ void processKernel(float* d_data, int n) {
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    if (idx < n) {
+        d_data[idx] = d_data[idx] * 2.0f + 1.0f;
+    }
+}
+
+int main() {
+    const int N = 1 << 20;          // 每批 1M 个 float
+    const int BATCHES = 4;
+
+    float* h_data[BATCHES];
+    float* d_data[BATCHES];
+    cudaStream_t streams[BATCHES];
+
+    for (int i = 0; i < BATCHES; i++) {
+        cudaMallocHost(&h_data[i], N * sizeof(float));  // 锁页内存：异步传输的前提
+        cudaMalloc(&d_data[i], N * sizeof(float));
+        cudaStreamCreate(&streams[i]);                   // 每批一个独立 Stream
+    }
+
+    for (int i = 0; i < BATCHES; i++) {
+        // 1) CPU 准备第 i 批数据（真实场景：收请求 / tokenization / 组张量）
+        for (int j = 0; j < N; j++) {
+            h_data[i][j] = static_cast<float>(i * N + j);
+        }
+
+        // 2) 异步搬运 H2D：提交后 CPU 立即返回
+        cudaMemcpyAsync(d_data[i], h_data[i], N * sizeof(float),
+                        cudaMemcpyHostToDevice, streams[i]);
+
+        // 3) 同一 Stream 内启动 kernel：会等上面的搬运完成
+        int threads = 256;
+        int blocks = (N + threads - 1) / threads;
+        processKernel<<<blocks, threads, 0, streams[i]>>>(d_data[i], N);
+
+        // 4) 异步回传 D2H
+        cudaMemcpyAsync(h_data[i], d_data[i], N * sizeof(float),
+                        cudaMemcpyDeviceToHost, streams[i]);
+
+        // CPU 不等！立刻进入下一轮，去准备第 i+1 批数据
+    }
+
+    // 所有批次提交完毕，再统一等待 GPU 完成
+    for (int i = 0; i < BATCHES; i++) {
+        cudaStreamSynchronize(streams[i]);
+    }
+
+    // 验证：期望 2 * (i * N + j) + 1
+    for (int i = 0; i < BATCHES; i++) {
+        float expected = 2.0f * (i * N) + 1.0f;
+        printf("第 %d 批：期望 %f，实际 %f\n", i, expected, h_data[i][0]);
+        cudaFreeHost(h_data[i]);
+        cudaFree(d_data[i]);
+        cudaStreamDestroy(streams[i]);
+    }
+    return 0;
+}
+```
+
+> **为什么能重叠？** `cudaMemcpyAsync` 和 `<<<..., stream>>>` 都只是把任务“塞进 Stream”就返回。GPU 的拷贝引擎（Copy Engine）与计算引擎是独立硬件，不同 Stream 的操作可以真正并行；而 CPU 只负责提交，提交完就继续准备下一批数据。
+>
+> **几个常见坑**：
+> - 主机内存必须是 **Pinned**，否则 `cudaMemcpyAsync` 会退化成同步拷贝，流水线直接断掉。
+> - 同一个 Stream 内严格顺序执行，所以“搬运 → kernel → 回传”必须放在**同一个** Stream 里才不会算错。
+> - 用**独立的缓冲区**做 ping-pong（本例按批分配），避免 CPU 还在写、GPU 正在读的数据竞争。
+> - 循环里**不要**调用 `cudaStreamSynchronize`，否则会逐批阻塞、反而比单 Stream 更慢；最后统一同步一次即可。
+
 ### 2.4 错误处理
 
 CUDA API 调用可能失败，生产代码中必须检查错误：
