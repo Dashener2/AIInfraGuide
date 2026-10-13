@@ -2,7 +2,7 @@
 
 > 从零开始深入理解 AI Infra 的核心全栈技术
 
-**在线浏览：[https://caomaolufei.github.io/AIInfraGuide/](https://caomaolufei.github.io/AIInfraGuide/)**
+**在线浏览：[https://dashener2.github.io/AIInfraGuide/](https://dashener2.github.io/AIInfraGuide/)**
 
 AI Infra 正在成为大模型时代最关键的工程能力之一。本项目系统梳理从 GPU 硬件到分布式训练、从 CUDA 编程到推理优化的完整技术栈，帮助工程师构建扎实的 AI 基础设施知识体系。同时提供了面试宝典模块（共收录 180+ 场面试真题，覆盖 60+ 家公司）。
 
@@ -13,9 +13,9 @@ AI Infra 正在成为大模型时代最关键的工程能力之一。本项目�
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome" />
 </div>
 
-<img src="https://caomaolufei.github.io/AIInfraGuide/images/AIinfraGuideWeb.png" alt="AIinfraGuideWeb" style="max-width: 100%; display: block; margin: 0 auto;" />
+<img src="https://dashener2.github.io/AIInfraGuide/images/AIinfraGuideWeb.png" alt="AIinfraGuideWeb" style="max-width: 100%; display: block; margin: 0 auto;" />
 
-<img src="https://caomaolufei.github.io/AIInfraGuide/images/AIinfraGuideWeb1.png" alt="AIinfraGuideWeb1" style="max-width: 100%; display: block; margin: 0 auto;" />
+<img src="https://dashener2.github.io/AIInfraGuide/images/AIinfraGuideWeb1.png" alt="AIinfraGuideWeb1" style="max-width: 100%; display: block; margin: 0 auto;" />
 
 ---
 
@@ -58,7 +58,7 @@ AIInfraGuide 正是为了解决这些问题而创建的——一个**开源、�
 
 | 序号 | 文章 | 说明 |
 |:---:|------|------|
-| 1 | [AI Infra 学习路线](https://caomaolufei.github.io/AIInfraGuide/guides/ai-infra学习路线/) | AI Infra 技术栈全貌、系统化学习路径与知识图谱 |
+| 1 | [AI Infra 学习路线](https://dashener2.github.io/AIInfraGuide/guides/ai-infra学习路线/) | AI Infra 技术栈全貌、系统化学习路径与知识图谱 |
 
 <br>
 
@@ -79,20 +79,20 @@ AIInfraGuide 正是为了解决这些问题而创建的——一个**开源、�
 
 | 序号 | 文章 | 说明 |
 |:---:|------|------|
-| 第3章 | [🔥 Transformer 架构：快速入门篇](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/transformer架构快速入门/) | Encoder-Decoder 结构、Self-Attention 机制入门 |
-| 3.1 | [AI Infra 工程师为什么必须懂 Transformer](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/31-ai-infra工程师为什么必须懂transformer/) | 从 Infra 视角理解 Transformer 的计算与显存特性 |
-| 3.2 | [Transformer 全貌及代码实现](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/32-transformer全貌及代码实现/) | 完整 Transformer 架构拆解与 PyTorch 实现 |
-| 3.3 | [Self-Attention机制深入理解](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/33-self-attention机制深入理解/) | Self-Attention 是 Transformer 的心脏，也是当代大模型中计算量最集中、优化手段最丰富的模块 |
-| 3.4 | [Transformer前馈网络ffn深入理解](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/34-transformer前馈网络ffn深入理解) | 前馈网络 FFN 负责对每个 token 进行独立的非线性变换，是模型记忆知识和深度推理的核心载体 |
-| 3.5 | [Transformer位置编码深入理解](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/35-transformer位置编码深入理解) | 位置编码是 Transformer 架构中一个看似不起眼却至关重要的组件 |
-| 3.6 | [LayerNorm与残差连接深入理解](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/36-layernorm与残差连接深入理解) | LayerNorm 和 残差连接 决定了大模型能不能学会 |
-| 3.7 | [Transformer Decoder Block完整解析](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/37-transformer-decoder-block完整解析) | 大语言模型的核心计算单元是 Transformer Decoder Block |
-| 3.8 | [从Transformer到LLM自回归生成深入理解](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/38-从transformer到llm自回归生成深入理解/) | 从宏观视角理解 Transformer 到 LLM 自回归生成的计算流程 |
-| 3.9 | [Tokenization与词嵌入](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/39-tokenization与词嵌入/) | 一段文字变成模型输入之前，需要先经过两道关键变换：Tokenization（分词） 和 Embedding（词嵌入） |
-| 第4章 | [🔥 PyTorch框架入门](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/pyroch/pytorch框架入门/) | PyTorch 是当前大模型训练和推理的事实标准框架 |
-| 第5章 | [🔥 GPU基础知识：从硬件架构到AI计算](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/gpu/gpu-basics/) | CPU vs GPU、SM 架构、显存层级、Tensor Core |
-| 5.1 | [NVIDIA GPU 架构演进：从 Volta 到 Blackwell](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/gpu/nvidia-gpu-evolution/) | V100 → A100 → H100 → B200 架构演进 |
-| 第6章 | [🔥 集群通信网络与NCCL：分布式训练的通信骨架](https://caomaolufei.github.io/AIInfraGuide/prerequisites/模块一-前置知识/communication/collective-communication-primer/) | 从通信原语到 Ring AllReduce 算法，再到 NCCL 实战，快速建立分布式训练集群通信的完整认知体系 |
+| 第3章 | [🔥 Transformer 架构：快速入门篇](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/transformer架构快速入门/) | Encoder-Decoder 结构、Self-Attention 机制入门 |
+| 3.1 | [AI Infra 工程师为什么必须懂 Transformer](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/31-ai-infra工程师为什么必须懂transformer/) | 从 Infra 视角理解 Transformer 的计算与显存特性 |
+| 3.2 | [Transformer 全貌及代码实现](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/32-transformer全貌及代码实现/) | 完整 Transformer 架构拆解与 PyTorch 实现 |
+| 3.3 | [Self-Attention机制深入理解](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/33-self-attention机制深入理解/) | Self-Attention 是 Transformer 的心脏，也是当代大模型中计算量最集中、优化手段最丰富的模块 |
+| 3.4 | [Transformer前馈网络ffn深入理解](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/34-transformer前馈网络ffn深入理解) | 前馈网络 FFN 负责对每个 token 进行独立的非线性变换，是模型记忆知识和深度推理的核心载体 |
+| 3.5 | [Transformer位置编码深入理解](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/35-transformer位置编码深入理解) | 位置编码是 Transformer 架构中一个看似不起眼却至关重要的组件 |
+| 3.6 | [LayerNorm与残差连接深入理解](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/36-layernorm与残差连接深入理解) | LayerNorm 和 残差连接 决定了大模型能不能学会 |
+| 3.7 | [Transformer Decoder Block完整解析](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/37-transformer-decoder-block完整解析) | 大语言模型的核心计算单元是 Transformer Decoder Block |
+| 3.8 | [从Transformer到LLM自回归生成深入理解](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/38-从transformer到llm自回归生成深入理解/) | 从宏观视角理解 Transformer 到 LLM 自回归生成的计算流程 |
+| 3.9 | [Tokenization与词嵌入](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/transformer/39-tokenization与词嵌入/) | 一段文字变成模型输入之前，需要先经过两道关键变换：Tokenization（分词） 和 Embedding（词嵌入） |
+| 第4章 | [🔥 PyTorch框架入门](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/pyroch/pytorch框架入门/) | PyTorch 是当前大模型训练和推理的事实标准框架 |
+| 第5章 | [🔥 GPU基础知识：从硬件架构到AI计算](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/gpu/gpu-basics/) | CPU vs GPU、SM 架构、显存层级、Tensor Core |
+| 5.1 | [NVIDIA GPU 架构演进：从 Volta 到 Blackwell](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/gpu/nvidia-gpu-evolution/) | V100 → A100 → H100 → B200 架构演进 |
+| 第6章 | [🔥 集群通信网络与NCCL：分布式训练的通信骨架](https://dashener2.github.io/AIInfraGuide/prerequisites/模块一-前置知识/communication/collective-communication-primer/) | 从通信原语到 Ring AllReduce 算法，再到 NCCL 实战，快速建立分布式训练集群通信的完整认知体系 |
 
 
 
@@ -118,27 +118,27 @@ AIInfraGuide 正是为了解决这些问题而创建的——一个**开源、�
 
 | 序号 | 文章 | 说明 |
 |:---:|------|------|
-| 快速入门| [✅ CUDA编程快速入门指南 🔥](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/cuda编程入门指南/) | CUDA 编程模型、线程层级、内存模型与 Kernel 编写 |
+| 快速入门| [✅ CUDA编程快速入门指南 🔥](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/cuda编程入门指南/) | CUDA 编程模型、线程层级、内存模型与 Kernel 编写 |
 | 第 1 章| CUDA 编程入门 | 开发环境搭建、编程模型、内存模型、第一个实用 Kernel |
-| 1.1 | [CUDA 开发环境搭建](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/11-cuda开发环境搭建) | 从零搭建一套完整的 CUDA 开发环境，包括驱动安装、Toolkit 配置、编译工具链和 IDE 集成 |
-| 1.2 | [CUDA 编程模型](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/12-cuda编程模型) | 深入理解 CUDA 的 Grid/Block/Thread 三级线程层次结构、线程索引计算方法和 Kernel 启动配置策略 |
-| 1.3 | [CUDA 内存模型](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/13-cuda内存模型) | 本文详解全局内存、共享内存、寄存器、常量内存和统一内存的特性、适用场景及优化技巧 |
-| 1.4 | [第一个实用 Kernel：向量加法](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/14-第一个实用kernel) | 通过一个完整的向量加法案例，走通 CUDA 编程的全流程 |
+| 1.1 | [CUDA 开发环境搭建](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/11-cuda开发环境搭建) | 从零搭建一套完整的 CUDA 开发环境，包括驱动安装、Toolkit 配置、编译工具链和 IDE 集成 |
+| 1.2 | [CUDA 编程模型](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/12-cuda编程模型) | 深入理解 CUDA 的 Grid/Block/Thread 三级线程层次结构、线程索引计算方法和 Kernel 启动配置策略 |
+| 1.3 | [CUDA 内存模型](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/13-cuda内存模型) | 本文详解全局内存、共享内存、寄存器、常量内存和统一内存的特性、适用场景及优化技巧 |
+| 1.4 | [第一个实用 Kernel：向量加法](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/14-第一个实用kernel) | 通过一个完整的向量加法案例，走通 CUDA 编程的全流程 |
 | 第 2 章| CUDA 性能优化基础 | Warp 与执行模型、内存访问优化、Occupancy 与资源分配、同步与原子操作 |
-| 2.1 | [Warp 与执行模型](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/21-warp与执行模型) | 深入理解 GPU 最核心的执行单元——Warp |
-| 2.2 | [内存访问优化](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/22-内存访问优化) | 内存访问效率是 CUDA Kernel 性能最大的杠杆 |
-| 2.3 | [Occupancy 与资源分配](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/23-occupancy与资源分配) | Occupancy 衡量 SM 上实际活跃 Warp 数与理论最大值的比例，是调优 CUDA Kernel 的核心指标之一 |
-| 2.4 | [同步与原子操作](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/24-同步与原子操作) | 正确的同步机制是编写无 Bug 并行程序的基础 |
+| 2.1 | [Warp 与执行模型](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/21-warp与执行模型) | 深入理解 GPU 最核心的执行单元——Warp |
+| 2.2 | [内存访问优化](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/22-内存访问优化) | 内存访问效率是 CUDA Kernel 性能最大的杠杆 |
+| 2.3 | [Occupancy 与资源分配](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/23-occupancy与资源分配) | Occupancy 衡量 SM 上实际活跃 Warp 数与理论最大值的比例，是调优 CUDA Kernel 的核心指标之一 |
+| 2.4 | [同步与原子操作](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/24-同步与原子操作) | 正确的同步机制是编写无 Bug 并行程序的基础 |
 | 第 3 章| 经典算子实现 - Reduce | 朴素实现、共享内存+树形归约、Warp Shuffle 优化、多级归约 |
-| 3.1 | [CUDA Reduce算子优化](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/31-cuda-reduce算子优化) | Reduce（规约）是 GPU 编程中最基础、也最能体现并行思维的算子之一 |
+| 3.1 | [CUDA Reduce算子优化](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/31-cuda-reduce算子优化) | Reduce（规约）是 GPU 编程中最基础、也最能体现并行思维的算子之一 |
 | 第 4 章| 经典算子实现 - GEMM | 矩阵乘法基础、Shared Memory Tiling、进一步优化、与 cuBLAS 对比 |
-| 4.1 | [CUDA GEMM算子性能优化](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/41-cuda-gemm算子性能优化) | 从朴素实现出发，逐步Block-Warp-Thread三级Tiling优化、向量化访存、Bank Conflict 消除、双缓冲等优化手段，带你系统掌握 CUDA GEMM 优化的完整方法论 |
+| 4.1 | [CUDA GEMM算子性能优化](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/41-cuda-gemm算子性能优化) | 从朴素实现出发，逐步Block-Warp-Thread三级Tiling优化、向量化访存、Bank Conflict 消除、双缓冲等优化手段，带你系统掌握 CUDA GEMM 优化的完整方法论 |
 | 第 5 章| 经典算子实现 - Softmax 与算子融合 | Softmax 数值稳定实现、Online Softmax、算子融合 |
-| 5.1 | [CUDA Softmax 朴素实现优化](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/51-cuda-softmax朴素实现优化) | 从朴素实现出发，逐步引入 Safe Softmax、Block 级并行、Warp Shuffle、向量化访存等优化手段 |
-| 5.2 | [CUDA Online Softmax 实现优化](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/52-cuda-online-softmax实现) | 逐步实现并优化 Online Softmax 的 CUDA Kernel，这也是理解 FlashAttention 的核心前置知识 |
+| 5.1 | [CUDA Softmax 朴素实现优化](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/51-cuda-softmax朴素实现优化) | 从朴素实现出发，逐步引入 Safe Softmax、Block 级并行、Warp Shuffle、向量化访存等优化手段 |
+| 5.2 | [CUDA Online Softmax 实现优化](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/52-cuda-online-softmax实现) | 逐步实现并优化 Online Softmax 的 CUDA Kernel，这也是理解 FlashAttention 的核心前置知识 |
 | 第 6 章| Attention 算子 | FlashAttention V1/V2/V3、Decode 阶段加速、PagedAttention CUDA 实现 |
-| 6.1 | [FlashAttention V1详解](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/61-flashattention-v1详解) | 本文深入剖析 FlashAttention V1 的核心原理与实现细节，理解如何通过 Tiling + Online Softmax 将 Attention 的额外显存占用从 $O(N^2)$ 降至 $O(N)$，同时大幅减少 HBM 访问量，实现无精度损失的加速 |
-| 6.2 | [FlashAttention V2详解](https://caomaolufei.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/62-flashattention-v2详解) | 本文深入剖析 FlashAttention V2 相比 V1 的核心改进：调换内外循环顺序、优化线程块内的工作分配、减少非矩阵乘运算 |
+| 6.1 | [FlashAttention V1详解](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/61-flashattention-v1详解) | 本文深入剖析 FlashAttention V1 的核心原理与实现细节，理解如何通过 Tiling + Online Softmax 将 Attention 的额外显存占用从 $O(N^2)$ 降至 $O(N)$，同时大幅减少 HBM 访问量，实现无精度损失的加速 |
+| 6.2 | [FlashAttention V2详解](https://dashener2.github.io/AIInfraGuide/cuda/模块二-cuda编程与算子优化/62-flashattention-v2详解) | 本文深入剖析 FlashAttention V2 相比 V1 的核心改进：调换内外循环顺序、优化线程块内的工作分配、减少非矩阵乘运算 |
 | 第 7 章| AI 编译器 | Triton、torch.compile、TVM/XLA 概述 |
 | 第 8 章| 性能分析工具链 | Nsight Systems/Compute、PyTorch Profiler |
 
@@ -168,15 +168,15 @@ AIInfraGuide 正是为了解决这些问题而创建的——一个**开源、�
 | 序号 | 文章 | 说明 |
 |:---:|------|------|
 | 第 1 章| 分布式训练总论 | 为什么需要分布式训练、训练显存账本、五大并行策略全景、环境搭建与 DDP 启动 |
-| 1.1 | [分布式训练总论：显存账本与五大并行策略全景](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/11-分布式训练总论/) | 手算训练显存账本，总览五大并行策略全景与选择原则 |
-| 1.2 | [环境搭建与分布式启动](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/12-环境搭建与分布式启动/) | rank/local_rank/world_size、torchrun 启动与会合机制、NCCL 调试、最小 DDP 脚本 |
+| 1.1 | [分布式训练总论：显存账本与五大并行策略全景](https://dashener2.github.io/AIInfraGuide/distributed/模块三-分布式训练/11-分布式训练总论/) | 手算训练显存账本，总览五大并行策略全景与选择原则 |
+| 1.2 | [环境搭建与分布式启动](https://dashener2.github.io/AIInfraGuide/distributed/模块三-分布式训练/12-环境搭建与分布式启动/) | rank/local_rank/world_size、torchrun 启动与会合机制、NCCL 调试、最小 DDP 脚本 |
 | 第 2 章| 集合通信原语 | AllReduce/ReduceScatter/AllGather/All-to-All 语义、Ring 算法、通信量量化分析 |
-| 2.1 | [集合通信原语详解](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/21-集合通信原语详解/) | AllReduce/ReduceScatter/AllGather/All-to-All 语义、Ring AllReduce 原理、通信耗时量化 |
+| 2.1 | [集合通信原语详解](https://dashener2.github.io/AIInfraGuide/distributed/模块三-分布式训练/21-集合通信原语详解/) | AllReduce/ReduceScatter/AllGather/All-to-All 语义、Ring AllReduce 原理、通信耗时量化 |
 | 第 3 章| 优化器 | SGD/Adam/AdamW 演进、优化器状态显存开销分析、大 Batch 优化器 LAMB/LARS |
-| 3.1 | [优化器：从 SGD 到 AdamW 与显存开销分析](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/31-优化器原理与显存开销分析/) | 优化器演进、优化器状态显存开销、FP32 主权重的必要性、LARS/LAMB |
+| 3.1 | [优化器：从 SGD 到 AdamW 与显存开销分析](https://dashener2.github.io/AIInfraGuide/distributed/模块三-分布式训练/31-优化器原理与显存开销分析/) | 优化器演进、优化器状态显存开销、FP32 主权重的必要性、LARS/LAMB |
 | 第 4 章| 数据并行 | DataParallel、DistributedDataParallel、FSDP |
-| 4.1 | [数据并行详解](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/41-数据并行详解/) | DP/DDP/FSDP 演进、梯度同步机制、通信量与显存账本的数学推导 |
-| 4.2 | [PyTorch 数据并行从原理到实战](https://caomaolufei.github.io/AIInfraGuide/distributed/模块三-分布式训练/42-pytorch-数据并行从原理到实战/) | 通信原语、DDP、FSDP 参数分片、多机多卡实战，附完整代码示例 |
+| 4.1 | [数据并行详解](https://dashener2.github.io/AIInfraGuide/distributed/模块三-分布式训练/41-数据并行详解/) | DP/DDP/FSDP 演进、梯度同步机制、通信量与显存账本的数学推导 |
+| 4.2 | [PyTorch 数据并行从原理到实战](https://dashener2.github.io/AIInfraGuide/distributed/模块三-分布式训练/42-pytorch-数据并行从原理到实战/) | 通信原语、DDP、FSDP 参数分片、多机多卡实战，附完整代码示例 |
 
 <br>
 
@@ -202,21 +202,21 @@ AIInfraGuide 正是为了解决这些问题而创建的——一个**开源、�
 | 序号 | 文章 | 说明 |
 |:---:|------|------|
 | 第 1 章 | LLM 推理基础 | Prefill/Decode 两阶段、KV Cache、性能指标、Roofline 瓶颈分析、推理链路 |
-| 1.1 | [LLM 推理基础](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第1章-llm推理基础/11-llm推理基础/) | Prefill/Decode 两阶段、KV Cache 显存账本、TTFT/TPOT 指标，用 Roofline 解释 Decode 为何 Memory Bound |
-| 1.2 | [vLLM 快速入门](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第1章-llm推理基础/12-vllm快速入门/) | 从安装到部署你的第一个 LLM 推理服务，离线批量推理与在线 OpenAI 兼容服务 |
+| 1.1 | [LLM 推理基础](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第1章-llm推理基础/11-llm推理基础/) | Prefill/Decode 两阶段、KV Cache 显存账本、TTFT/TPOT 指标，用 Roofline 解释 Decode 为何 Memory Bound |
+| 1.2 | [vLLM 快速入门](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第1章-llm推理基础/12-vllm快速入门/) | 从安装到部署你的第一个 LLM 推理服务，离线批量推理与在线 OpenAI 兼容服务 |
 | 第 2 章 | 推理引擎核心技术 | PagedAttention、Continuous Batching、Prefix Cache、Chunked Prefill、Attention 后端与图优化 |
-| 2.1 | [PagedAttention](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/21-pagedattention/) | 借鉴虚拟内存分页思想，用 Block Table 消除 KV Cache 碎片化，支持前缀共享与 Copy-on-Write |
-| 2.2 | [Continuous Batching](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/22-continuous-batching/) | Iteration-level Scheduling 让请求随到随拼、完成即退，把 GPU 利用率从三成拉到八成以上 |
-| 2.3 | [Prefix Cache 与 RadixAttention](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/23-prefix-cache-与-radixattention/) | vLLM 基于 Hash 的自动前缀缓存，SGLang 用 Radix Tree 做更高效的前缀共享 |
-| 2.4 | [Chunked Prefill 与统一调度](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/24-chunked-prefill-与统一调度/) | 切块 Prefill 消除对 Decode 的干扰，vLLM V1 用统一 Token 预算调度器抹平 Prefill/Decode 边界 |
-| 2.5 | [Attention 后端与图优化](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/25-attention-后端与图优化/) | 可插拔 Attention 后端与 CUDA Graph、torch.compile 消除 Decode 阶段的 CPU 启动开销 |
+| 2.1 | [PagedAttention](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/21-pagedattention/) | 借鉴虚拟内存分页思想，用 Block Table 消除 KV Cache 碎片化，支持前缀共享与 Copy-on-Write |
+| 2.2 | [Continuous Batching](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/22-continuous-batching/) | Iteration-level Scheduling 让请求随到随拼、完成即退，把 GPU 利用率从三成拉到八成以上 |
+| 2.3 | [Prefix Cache 与 RadixAttention](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/23-prefix-cache-与-radixattention/) | vLLM 基于 Hash 的自动前缀缓存，SGLang 用 Radix Tree 做更高效的前缀共享 |
+| 2.4 | [Chunked Prefill 与统一调度](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/24-chunked-prefill-与统一调度/) | 切块 Prefill 消除对 Decode 的干扰，vLLM V1 用统一 Token 预算调度器抹平 Prefill/Decode 边界 |
+| 2.5 | [Attention 后端与图优化](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第2章-推理引擎核心技术/25-attention-后端与图优化/) | 可插拔 Attention 后端与 CUDA Graph、torch.compile 消除 Decode 阶段的 CPU 启动开销 |
 | 第 3 章 | nano-vllm 源码解读 | 以约 1200 行极简引擎 nano-vllm 为主线，逐模块读懂连续批处理、PagedAttention、FlashAttention、张量并行与 CUDA Graph |
-| 3.1 | [项目全景与四层架构](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/31-项目全景与四层架构/) | nano-vllm 定位、目录结构，与接口/引擎/调度/执行四层架构及端到端数据流 |
-| 3.2 | [配置、入口与一次 generate 的全流程](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/32-配置入口与推理主循环/) | Config/SamplingParams、LLM 对 LLMEngine 的封装，以及 generate→add_request→step→postprocess 主循环 |
-| 3.3 | [模型骨架与核心算子](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/33-模型与核心算子/) | RMSNorm/RoPE/SwiGLU、并行 Linear 族与张量并行、词表并行 Embedding/LMHead、Attention 两条路径 |
-| 3.4 | [KV Cache 与 BlockManager](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/34-kvcache与blockmanager/) | Block 结构、PagedAttention 分块、基于 xxhash 的前缀缓存、块的分配回收与 Sequence 状态机 |
-| 3.5 | [Scheduler 与连续批处理](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/35-scheduler与连续批处理/) | Waiting/Running 双队列、Prefill/Decode 分离调度、Token Budget、chunked prefill 与抢占重算 |
-| 3.6 | [ModelRunner、CUDA Graph 与性能基准](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/36-modelrunner引擎循环与性能/) | 序列张量化、全局 Context、KV Cache 显存切分、CUDA Graph 捕获回放，以及官方基准与 vLLM 对比 |
+| 3.1 | [项目全景与四层架构](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/31-项目全景与四层架构/) | nano-vllm 定位、目录结构，与接口/引擎/调度/执行四层架构及端到端数据流 |
+| 3.2 | [配置、入口与一次 generate 的全流程](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/32-配置入口与推理主循环/) | Config/SamplingParams、LLM 对 LLMEngine 的封装，以及 generate→add_request→step→postprocess 主循环 |
+| 3.3 | [模型骨架与核心算子](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/33-模型与核心算子/) | RMSNorm/RoPE/SwiGLU、并行 Linear 族与张量并行、词表并行 Embedding/LMHead、Attention 两条路径 |
+| 3.4 | [KV Cache 与 BlockManager](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/34-kvcache与blockmanager/) | Block 结构、PagedAttention 分块、基于 xxhash 的前缀缓存、块的分配回收与 Sequence 状态机 |
+| 3.5 | [Scheduler 与连续批处理](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/35-scheduler与连续批处理/) | Waiting/Running 双队列、Prefill/Decode 分离调度、Token Budget、chunked prefill 与抢占重算 |
+| 3.6 | [ModelRunner、CUDA Graph 与性能基准](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第3章-nano-vllm源码解读/36-modelrunner引擎循环与性能/) | 序列张量化、全局 Context、KV Cache 显存切分、CUDA Graph 捕获回放，以及官方基准与 vLLM 对比 |
 | 第 4 章 | 量化 | 量化基础、SmoothQuant、GPTQ/AWQ、FP8、NVFP4/MXFP4、KV Cache 量化 |
 | 4.1 | [量化基础](./docs/guides/模块四-推理优化/第4章-量化/4.1-量化基础.md) | Scale、对称与非对称量化、量化粒度、校准与 PTQ/QAT |
 | 4.2 | [W8A8 与 SmoothQuant](./docs/guides/模块四-推理优化/第4章-量化/4.2-W8A8与SmoothQuant.md) | 激活离群值、等价缩放、平滑系数与 INT8 GEMM |
@@ -225,27 +225,27 @@ AIInfraGuide 正是为了解决这些问题而创建的——一个**开源、�
 | 4.5 | [FP8 与 NVFP4/MXFP4](./docs/guides/模块四-推理优化/第4章-量化/4.5-FP8与NVFP4-MXFP4.md) | 浮点编码、微块缩放与硬件支持条件 |
 | 4.6 | [量化选型与 vLLM 实战](./docs/guides/模块四-推理优化/第4章-量化/4.6-量化选型与vLLM实战.md) | 按瓶颈选型，控制变量比较 FP16/AWQ 吞吐与生成质量 |
 | 第 5 章｜ Speculative Decoding | Draft+Verify 原理、N-gram/Suffix、Medusa/EAGLE、vLLM 投机解码实战 |
-| 5.1 | [投机解码核心原理](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/51-投机解码核心原理/) | Draft + Verify、接受与残差采样的保分布证明、KV 回退 |
-| 5.2 | [Draft 模型与无模型方案](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/52-draft模型与无模型方案/) | 独立 Draft、Tokenizer 兼容、N-gram/Suffix、接受率与候选覆盖 |
-| 5.3 | [Medusa 与 EAGLE](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/53-medusa与eagle/) | 多头预测、EAGLE-2/3、Draft Tree 与 Tree Attention、验收边界 |
-| 5.4 | [收益边界与限制](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/54-收益边界与限制/) | 提交长度与轮耗时账本、并发、长上下文、量化与调度 |
-| 5.5 | [vLLM 投机解码实战](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/55-vllm投机解码实战/) | 固定版本的基线/N-gram/Draft 对照、代码与对话指标采集 |
+| 5.1 | [投机解码核心原理](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/51-投机解码核心原理/) | Draft + Verify、接受与残差采样的保分布证明、KV 回退 |
+| 5.2 | [Draft 模型与无模型方案](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/52-draft模型与无模型方案/) | 独立 Draft、Tokenizer 兼容、N-gram/Suffix、接受率与候选覆盖 |
+| 5.3 | [Medusa 与 EAGLE](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/53-medusa与eagle/) | 多头预测、EAGLE-2/3、Draft Tree 与 Tree Attention、验收边界 |
+| 5.4 | [收益边界与限制](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/54-收益边界与限制/) | 提交长度与轮耗时账本、并发、长上下文、量化与调度 |
+| 5.5 | [vLLM 投机解码实战](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第5章-speculative-decoding/55-vllm投机解码实战/) | 固定版本的基线/N-gram/Draft 对照、代码与对话指标采集 |
 | 第 6 章 | 分布式推理与大模型部署 | 张量并行、流水线并行、数据/专家并行、Ray 多节点、vLLM 分布式部署 |
 | 第 7 章 | PD 解耦架构 | 混合 Batching 干扰、DistServe/Splitwise、KV Cache 传输、Goodput 与 SLO 调度 |
 | 第 8 章 | 性能分析与 Benchmark | 推理指标体系、vllm bench/GenAI-Perf、Nsight、性能回归门禁 |
 | 第 9 章 | 生产部署与运维 | 容器化与 K8s 部署、可观测性、自动扩缩容、负载均衡、容量规划 |
 | 第 10 章 | 端侧推理 | 端侧软硬件栈、异构执行、运行时选型、量化、内存优化与 Benchmark |
-| 10.1 | [端侧推理基础：从模型导出到异构硬件执行](https://caomaolufei.github.io/AIInfraGuide/inference/模块四-推理优化/第12章-端侧推理/121-端侧推理基础/) | 端侧约束、软硬件栈、运行时选型、量化与内存优化、Benchmark，以及 ExecuTorch/XNNPACK 最小实例 |
+| 10.1 | [端侧推理基础：从模型导出到异构硬件执行](https://dashener2.github.io/AIInfraGuide/inference/模块四-推理优化/第12章-端侧推理/121-端侧推理基础/) | 端侧约束、软硬件栈、运行时选型、量化与内存优化、Benchmark，以及 ExecuTorch/XNNPACK 最小实例 |
 
 <br>
 
 ## 🎯 面试宝典
 
-共收录 **180+ 场面试真题**，覆盖 **60+ 家公司**，按梯队分类组织。[在线浏览 →](https://caomaolufei.github.io/AIInfraGuide/interview)
+共收录 **180+ 场面试真题**，覆盖 **60+ 家公司**，按梯队分类组织。[在线浏览 →](https://dashener2.github.io/AIInfraGuide/interview)
 
 涵盖公司包括字节跳动、阿里巴巴、腾讯、百度、快手、美团、蚂蚁、英伟达、MiniMax、蔚来、小鹏、理想等。
 
-<img src="https://caomaolufei.github.io/AIInfraGuide/images/AIinfraGuideWeb2.png" alt="AIinfraGuideWeb2" style="max-width: 100%; display: block; margin: 0 auto;" />
+<img src="https://dashener2.github.io/AIInfraGuide/images/AIinfraGuideWeb2.png" alt="AIinfraGuideWeb2" style="max-width: 100%; display: block; margin: 0 auto;" />
 
 <br>
 
@@ -324,7 +324,7 @@ AIInfraGuide 是一个开源项目，欢迎通过以下方式参与共建：
 - 公众号: [《AI Infra Guide》](https://mp.weixin.qq.com/s/oxUBDTd-b1aZnh0jGR5tqw)
 - 知乎: [草帽路飞](https://zhihu.com/people/zi-you-zi-zai-de-zhan-sheng)
 - 社群: （vx： caomaolufei2026）
-<img src="https://caomaolufei.github.io/AIInfraGuide/images/wx_qun.png" alt="wx_qun" style="max-width: 50%; display: block; margin: 0 auto;" />
+<img src="https://dashener2.github.io/AIInfraGuide/images/wx_qun.png" alt="wx_qun" style="max-width: 50%; display: block; margin: 0 auto;" />
 
 ## License
 
